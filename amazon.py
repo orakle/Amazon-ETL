@@ -1,5 +1,6 @@
 import datetime
 import csv
+import json
 
 
 review_list = []
@@ -52,3 +53,8 @@ writer = csv.DictWriter(open('movie.sample.output.tsv', 'w'),
 writer.writeheader()
 for review in list_of_dict:
     writer.writerow(review)
+
+# Output to JSON
+with open('movie.sample.output.json', 'w') as outfile:
+	for review in list_of_dict:
+		json.dump(review, outfile)
