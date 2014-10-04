@@ -1,6 +1,14 @@
 Amazon-ETL
 ==========
 
+Importing into MongoDB
+
+```
+verkter@localhost:~/Desktop/Amazon-ETL$ mongoimport --host linus.mongohq.com --port 10022 --username verkter --password amazonreviews --db amazon-reviews --collection reviews --type json --file movie.sample.output.json --jsonArray
+connected to: linus.mongohq.com:10022
+imported 88 objects
+```
+
 Data Exploration
 
 1. Take a look at our data.
