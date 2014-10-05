@@ -1,15 +1,13 @@
 Amazon-ETL
 ==========
+### Practicing data transformation and MongoDB import
 
-Importing into MongoDB
+##### Contents
+1. Data Exploration
+2. Data Transformation
+3. MongoDB import
 
-```
-verkter@localhost:~/Desktop/Amazon-ETL$ mongoimport --host linus.mongohq.com --port 10022 --username verkter --password amazonreviews --db amazon-reviews --collection reviews --type json --file movie.sample.output.json --jsonArray
-connected to: linus.mongohq.com:10022
-imported 88 objects
-```
-
-Data Exploration
+##### 1. Data Exploration
 
 1. Take a look at our data.
 
@@ -49,3 +47,14 @@ review/summary: spell-binding
 review/text: I am not a movie fan.  I find it difficult to sit and watch a story for 2 hours (and nearly impossible to 'suspend disbelief').  I will not pretend to write a clinical analysis of movie-making.  I will simply say I have seen this movie twice (and plan to see it again, nearly unheard of in my case) and both times was fully enveloped in this fascinating, beautifully told story.  That editing and departure from the novel occurred in some points is no surprise (just 2 hours), but the essence of the story remains, the victory of good over evil.  Tremendous movie.
 ```
 
+##### 2. Data transformation
+
+
+
+##### 3. MongoDB import
+
+```
+verkter@localhost:~/Desktop/Amazon-ETL$ mongoimport --host linus.mongohq.com --port 10022 --username verkter --password amazonreviews --db amazon-reviews --collection reviews --type json --file movie.sample.output.json --jsonArray
+connected to: linus.mongohq.com:10022
+imported 88 objects
+```

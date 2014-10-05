@@ -9,11 +9,11 @@ review_list = []
 # Strip new lines
 for line in open('movies.small.txt'):
 	# Ignore encoding errors (0xf8 error)  
-	try:
-		encoded_line = line.encode('utf-8')
-	except Exception:
-		pass
-	review_list.append(encoded_line.strip())
+    try:
+        encoded_line = line.encode('utf-8')
+    except Exception:
+        pass
+    review_list.append(encoded_line.strip())
     
 # Grouping review into dict of dicts based on the empy string item
 grouped_reviews = []
@@ -61,4 +61,4 @@ for review in list_of_dict:
 
 # Output to JSON
 with open('movie.small.output.json', 'w') as outfile:
-		json.dump(list_of_dict, outfile)
+    json.dump(list_of_dict, outfile)
