@@ -53,6 +53,8 @@ review/text: I am not a movie fan.  I find it difficult to sit and watch a story
 
 ### 2. Data transformation
 
+Please refer to ETL-Notes.ipynb for the notes on data transformation.
+
 ### 3. MongoDB import
 
 ```
