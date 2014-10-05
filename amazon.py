@@ -7,8 +7,13 @@ review_list = []
 
 # Read file into a list
 # Strip new lines
-for line in open('movies.sample.txt'):
-    review_list.append(line.strip())
+for line in open('movies.small.txt'):
+	# Ignore encoding errors (0xf8 error)  
+	try:
+		encoded_line = line.encode('utf-8')
+	except Exception:
+		pass
+	review_list.append(encoded_line.strip())
     
 # Grouping review into dict of dicts based on the empy string item
 grouped_reviews = []
@@ -46,7 +51,7 @@ for review in list_of_dict:
 
 # Output to tsv
 # Create a writer object
-writer = csv.DictWriter(open('movie.sample.output.tsv', 'w'),
+writer = csv.DictWriter(open('movie.small.output.tsv', 'w'),
                        ['productId', 'profileName', 'helpfulness', 'score', 'time'],
                        delimiter = '\t',
                        extrasaction = 'ignore')
@@ -55,6 +60,5 @@ for review in list_of_dict:
     writer.writerow(review)
 
 # Output to JSON
-with open('movie.sample.output.json', 'w') as outfile:
-	for review in list_of_dict:
-		json.dump(review, outfile)
+with open('movie.small.output.json', 'w') as outfile:
+		json.dump(list_of_dict, outfile)
