@@ -20,7 +20,7 @@ ETL-Notes.ipynb contains my notes and script tested with movies.sample.txt
 verkter@localhost:~/Desktop/Amazon-ETL$ wc movies.small.txt 
   49994 1039720 6536908 movies.small.txt
 ```
-We have total of lines of text, which is about . Perhaps, we should take a sample of our dataset to work on our script. 
+We have total of lines of text, which is about 6,250 product reviews. Perhaps, we should take a sample of our dataset to work on our script. 
 
 2. Take a look at first ten lines of the file to get a sense of our data. It appears that review information consists of 8 lines separated by a space.
 ```
